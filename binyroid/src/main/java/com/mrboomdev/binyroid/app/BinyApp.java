@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Handler;
 import android.util.ArrayMap;
 import android.widget.Toast;
@@ -57,12 +58,16 @@ public class BinyApp {
 		getAnyActivity().runOnUiThread(callback);
 	}
 
+	public static Resources getResources() {
+		return getAppContext().getResources();
+	}
+
 	public static PackageManager getPackageManager() {
 		return getAppContext().getPackageManager();
 	}
 
 	public static Configuration getConfiguration() {
-		return getAppContext().getResources().getConfiguration();
+		return getResources().getConfiguration();
 	}
 
 	public static boolean isPortrait() {
