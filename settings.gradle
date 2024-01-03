@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Binyroid"
-include ':binydroid'
+include ':binyroid'
+include ':visual-test'
